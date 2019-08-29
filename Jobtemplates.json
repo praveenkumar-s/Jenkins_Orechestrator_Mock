@@ -1,0 +1,179 @@
+{
+    "project_panamera": {
+        "jobs": [
+            {
+                "name": "GivePermissions",
+                "running_time": 10,
+                "params": {}
+            },
+            {
+                "name": "getBuild",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "Copybuild",
+                "running_time": 15,
+                "prams": {}
+            },
+            {
+                "name": "CopyandInstall",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "AMQ",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "PreDelivery",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "RecipeLotCompatability",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector2",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg2",
+                "running_time": 240,
+                "params": {}
+            }
+        ]
+    },
+    "project_Tesla": {
+        "jobs": [
+            {
+                "name": "GivePermissions",
+                "running_time": 10,
+                "params": {}
+            },
+            {
+                "name": "getBuild",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "Copybuild",
+                "running_time": 15,
+                "prams": {}
+            },
+            {
+                "name": "CopyandInstall",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "AMQ",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "PreDelivery",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "RecipeLotCompatability",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector2",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg2",
+                "running_time": 240,
+                "params": {}
+            }
+        ]
+    },
+    "project_Skyline": {
+        "jobs": [
+            {
+                "name": "GivePermissions",
+                "running_time": 10,
+                "params": {}
+            },
+            {
+                "name": "getBuild",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "Copybuild",
+                "running_time": 15,
+                "prams": {}
+            },
+            {
+                "name": "CopyandInstall",
+                "running_time": 15,
+                "params": {}
+            },
+            {
+                "name": "AMQ",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "PreDelivery",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "RecipeLotCompatability",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "OpticsSelector2",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg1",
+                "running_time": 240,
+                "params": {}
+            },
+            {
+                "name": "MiniReg2",
+                "running_time": 240,
+                "params": {}
+            }
+        ]
+    }
+}
