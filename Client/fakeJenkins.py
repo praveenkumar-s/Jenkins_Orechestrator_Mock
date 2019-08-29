@@ -6,11 +6,12 @@ class jenkins():
     def __init__(self,url , user=None , password=None, default_project_name ='project_panamera'):
         self.url= url
         self.default_project_name=default_project_name
+        
     
     def build_job(self, job_name , project_name=None, parameters={}, async_=True):
         if(project_name is None):
             project_name = self.default_project_name
-        url = urllib.parse.urljoin(self.url , 'api/projects/'+project_name+'/'+job_name+'/start')
+        url = urllib.parse.urljoin(self.url , 'api/'+project_name+'/'+job_name+'/start')
         rs = requests.post(url = url , json= parameters)
         if(async_):
             return rs.json()
