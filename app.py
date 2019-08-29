@@ -91,7 +91,42 @@ def stop(project, job , build_number):
         "completed_at":data[0][4]
     })
     
+@app.route('/api/projects',methods=['GET'])
+def get_projects():
+    projects={"projects":[]}
+    for items  in job_templates.keys():
+        projects['projects'].append(items)
+    return jsonify(projects)
 
+@app.route('/api/projects/<project>/jobs' , methods=['GET'])
+def get_jobs_for_project(project):
+    if(project in job_templates.keys()):
+        return jsonify(job_templates[project])
+    else:
+        return "project not found",404
+
+@app.route('/api/projects/<project>/<jobs>', methods=['GET'])
+def get_builds_for_job(project , jobs):
+    out_data ={
+        "project":project,
+        "job":{
+            "name":jobs,
+            "builds":[]
+        }
+    }
+    conn=sqlite3.connect('cache.db')
+    cursor = conn.cursor()
+    cursor.execute(utils.Queries['get_builds_for_job'], (jobs , project) )
+    result_set = cursor.fetchall()
+    for items in result_set:
+        out_data['job']['builds'].append({
+            "ID":items[0],
+            "status":items[1],
+            "createdAt":str(items[2]),
+            "endTime":str(items[3])
+        })
+    conn.close()
+    return jsonify(out_data)
 
 if __name__ == '__main__':
     app.run()

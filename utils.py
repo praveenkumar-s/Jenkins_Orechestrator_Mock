@@ -3,7 +3,9 @@ Queries = {
     "get_build_id":"select ID from data where uuid =?",
     "get_build_by_id":"select * from data where id = ?",
     "update_status":"update data set status = ?, EndTime=? where ID =?",
-    "get_status":"select project,job,status,createdAt, EndTime from data where ID=?"
+    "get_status":"select project,job,status,createdAt, EndTime from data where ID=?",
+    "get_builds_for_job":"select ID, status, createdAt,EndTime from data where job = ? and project =?"
+    
 }
 
 
