@@ -19,7 +19,7 @@
 #### To Start the server:
     python app.py
 
-#### Client:
+### Client Library:
     To create an instance of the client, copy the fakejenkins.py file to the root directory and use:
 
     import fakeJenkins
