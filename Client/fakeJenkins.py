@@ -41,9 +41,37 @@ class jenkins():
     def stop_build(self, job_name , build_number , project_name=None):
         if(project_name is None):
             project_name = self.default_project_name
-        stop_url = urllib.parse.urljoin(self.url , '/api/'+project_name+'/'+job_name+'/'+build_number+'/stop')
+        stop_url = urllib.parse.urljoin(self.url , '/api/'+project_name+'/'+job_name+'/'+str(build_number)+'/stop')
         rs = requests.get(stop_url)
         if(rs.status_code==200):
             return rs.json()
         else:
             return str(rs.status_code)+' : '+rs.content
+
+    def get_projects(self):
+        url = urllib.parse.urljoin(self.url, '/api/projects')
+        rs = requests.get(url)
+        if(rs.status_code==200):
+            return rs.json()
+        else:
+            return None
+    
+    def get_jobs(self, project_name=None):
+        if(project_name == None):
+            project_name = self.default_project_name
+        url = urllib.parse.urljoin(self.url, '/api/projects/'+project_name+'/jobs')
+        rs = requests.get(url)
+        if(rs.status_code == 200):
+            return rs.json()
+        else:
+            return None
+        
+    def get_builds(self, job_name , project_name=None):
+        if(project_name == None):
+            project_name = self.default_project_name
+        url = urllib.parse.urljoin(self.url, '/api/projects/'+project_name+'/'+job_name)
+        rs = requests.get(url)
+        if(rs.status_code == 200):
+            return rs.json()
+        else:
+            return None
