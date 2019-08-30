@@ -16,6 +16,9 @@
 #### Create a job:
     Jobs can be created under the jobs[] of the project in the Jobtemplates.json file. Job can store the name, running time and params that needs to be passed to the job
 
+#### To Start the server:
+    python app.py
+
 #### Client:
     To create an instance of the client, copy the fakejenkins.py file to the root directory and use:
 
