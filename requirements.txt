@@ -1,4 +1,4 @@
 python_jenkins==1.4.0
-Flask==1.0.2
+Flask==2.3.2
 requests==2.22.0
 
